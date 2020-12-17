@@ -8,21 +8,24 @@ Time spent: **6** hours spent in total
 
 The following **required** functionality is completed:
 
-- [ ] User can pick from a list of different fun languages to translate to.
-- [ ] User can write down English words and sentences to translate with.
-- [ ] User will be able to get back the translated phrase
+- [X] User can pick from a list of different fun languages to translate to.
+- [X] User can write down English words and sentences to translate with.
+- [X] User will be able to get back the translated phrase
+- [ ] User can also go to the original translator and translate from real-world languages.
 
 The following **additional** features are implemented:
 
-- [ ] App changes colors based on what language is picked.
-- [ ] App has a total of six different languages.
+- [X] App changes colors based on what language is picked.
+- [X] App has a total of six different languages.
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
+App being able to translate to fun language:
 <img src='https://github.com/trishshsh/Translator/blob/master/group.gif' title='Video Walkthrough of Translation Happening' width='' alt='Video Walkthrough of Translation Happening' />
 
+App reaching the 5 API requests limit with updated colors for each language:
 <img src='https://github.com/trishshsh/Translator/blob/master/group2.gif' title='Video Walkthrough of Color Implemented' width='' alt='Video Walkthrough of Color Implemented' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
