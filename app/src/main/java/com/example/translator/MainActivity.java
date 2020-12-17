@@ -1,8 +1,10 @@
 package com.example.translator;
 
+import androidx.annotation.ColorInt;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -43,12 +46,13 @@ public class MainActivity extends AppCompatActivity {
     AsyncHttpClient client;
     Spinner dropdown;
     String currURL;
+    RelativeLayout rlMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        rlMain = findViewById(R.id.rl);
         tvTitle = findViewById(R.id.tvTitle);
         etCompose = findViewById(R.id.etCompose);
         btSubmit = findViewById(R.id.btSubmit);
@@ -76,32 +80,44 @@ public class MainActivity extends AppCompatActivity {
                     case 0:
                         // Whatever you want to happen when the first item gets selected
                         currURL = YODA_URL;
-                        //tvTranslation.setText("Yoda");
+                        tvTranslation.setText("Translate to Yoda's language, young Pandawan.");
+                        rlMain.setBackgroundColor(Color.parseColor("#339966"));
+                        tvTitle.setBackgroundColor(Color.parseColor("#669999"));
                         break;
                     case 1:
                         // Whatever you want to happen when the second item gets selected
                         currURL = PIRATE_URL;
-                        //tvTranslation.setText("Pirate");
+                        tvTranslation.setText("Translate to Pirate language! ARGGG!");
+                        rlMain.setBackgroundColor(Color.parseColor("#993300"));
+                        tvTitle.setBackgroundColor(Color.parseColor("#ff6666"));
                         break;
                     case 2:
                         // Whatever you want to happen when the second item gets selected
                         currURL = VALSPEAK_URL;
-                        //tvTranslation.setText("Valspeak");
+                        tvTranslation.setText("Translate to Valspeak language.");
+                        rlMain.setBackgroundColor(Color.parseColor("#cc99ff"));
+                        tvTitle.setBackgroundColor(Color.parseColor("#4d0099"));
                         break;
                     case 3:
                         // Whatever you want to happen when the second item gets selected
                         currURL = MINION_URL;
-                        //tvTranslation.setText("Minion");
+                        tvTranslation.setText("Translate to Minion!");
+                        rlMain.setBackgroundColor(Color.parseColor("#ffff99"));
+                        tvTitle.setBackgroundColor(Color.parseColor("#996600"));
                         break;
                     case 4:
                         // Whatever you want to happen when the second item gets selected
                         currURL = PIG_URL;
-                        //tvTranslation.setText("Pig Latin");
+                        tvTranslation.setText("Translate to Pig Latin!");
+                        rlMain.setBackgroundColor(Color.parseColor("#ff99cc"));
+                        tvTitle.setBackgroundColor(Color.parseColor("#993366"));
                         break;
                     case 5:
                         // Whatever you want to happen when the second item gets selected
                         currURL = SHAKESPEARE_URL;
-                        //tvTranslation.setText("Shakespeare");
+                        tvTranslation.setText("Translate to Shakespeare!");
+                        rlMain.setBackgroundColor(Color.parseColor("#666699"));
+                        tvTitle.setBackgroundColor(Color.parseColor("#6b6166"));
                         break;
                 }
             }
@@ -116,12 +132,12 @@ public class MainActivity extends AppCompatActivity {
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String content = currURL + etCompose.getText().toString();
-                if (content.isEmpty()) {
+                if (etCompose.getText().toString().isEmpty()) {
                     Toast.makeText(MainActivity.this, "Sorry, your input cannot be empty", Toast.LENGTH_LONG).show();
                     return;
                 }
 
+                String content = currURL + etCompose.getText().toString();
 
                 client.get(content, new JsonHttpResponseHandler() {
                     @Override
@@ -141,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
 
                     @Override
                     public void onFailure(int statusCode, Headers headers, String response, Throwable throwable) {
-                        Toast.makeText(MainActivity.this, "API Request Error. Status Code: " + statusCode, Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this, "API Request Limit 5 Reached: " + response, Toast.LENGTH_LONG).show();
                     }
                 });
 
