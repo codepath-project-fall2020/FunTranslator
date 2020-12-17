@@ -21,7 +21,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='hhttps://github.com/trishshsh/Translator/blob/master/group.gif' title='Video Walkthrough of Translation Happening' width='' alt='Video Walkthrough of Translation Happening' />
+<img src='https://github.com/trishshsh/Translator/blob/master/group.gif' title='Video Walkthrough of Translation Happening' width='' alt='Video Walkthrough of Translation Happening' />
 
 <img src='https://github.com/trishshsh/Translator/blob/master/group2.gif' title='Video Walkthrough of Color Implemented' width='' alt='Video Walkthrough of Color Implemented' />
 
