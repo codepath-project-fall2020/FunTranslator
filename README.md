@@ -21,9 +21,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/group.gif' title='Video Walkthrough of Translation Happening' width='' alt='Video Walkthrough of Translation Happening' />
+<img src='hhttps://github.com/trishshsh/Translator/blob/master/group.gif' title='Video Walkthrough of Translation Happening' width='' alt='Video Walkthrough of Translation Happening' />
 
-<img src='http://i.imgur.com/link/to/your/gif/group2.gif' title='Video Walkthrough of Color Implemented' width='' alt='Video Walkthrough of Color Implemented' />
+<img src='https://github.com/trishshsh/Translator/blob/master/group2.gif' title='Video Walkthrough of Color Implemented' width='' alt='Video Walkthrough of Color Implemented' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
