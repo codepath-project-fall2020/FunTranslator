@@ -30,6 +30,14 @@ App reaching the 5 API requests limit with updated colors for each language:
 
 <img src='https://github.com/trishshsh/Translator/blob/master/group2.gif' title='Video Walkthrough of Color Implemented' width='' alt='Video Walkthrough of Color Implemented' />
 
+Here's an updated version of the user interface:
+
+<img src='https://github.com/codepath-project-fall2020/FunTranslator/blob/master/group3.gif' width='300' />
+
+A walkthrough of just the different frames for each language:
+
+<img src="https://github.com/codepath-project-fall2020/FunTranslator/blob/master/frames.gif" width='300'/>
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
